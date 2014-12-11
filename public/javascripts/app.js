@@ -10,5 +10,6 @@ $(document).ready(function() {
   $("#outputButton").click(function() {
     //Put people into db
     people = []
+    mongoose
   })
 })
