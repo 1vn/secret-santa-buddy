@@ -1,5 +1,5 @@
+var people = []
 $(document).ready(function() {
-  var people = []
   $("#addPeopleButton").click(function() {
     console.log("Button pressed")
     people.push($("#input").text())
@@ -9,7 +9,20 @@ $(document).ready(function() {
 
   $("#outputButton").click(function() {
     //Put people into db
-    people = []
-    mongoose
+    matches = matchMaker(people);
+
+
   })
 })
+
+function matchMaker(people) {
+  var matches = []
+  for (var i = 0; i < people.length; i++) {
+    match = people[parseInt(Math.random() * people.length)]
+    while (matches.indexOf(match) >= 0 || match == people[i]) {
+      match = people[parseInt(Math.random() * people.length)]
+    }
+    matches.push(match)
+  }
+  return matches
+}
