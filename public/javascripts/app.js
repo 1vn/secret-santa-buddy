@@ -1,16 +1,17 @@
 var people = []
 $(document).ready(function() {
   $("#addPeopleButton").click(function() {
+    if ($("#input").text() != "Enter your friends names..."){
     console.log("Button pressed")
     people.push($("#input").text())
     console.log(people)
     $("#input").empty()
+  }
   })
 
   $("#outputButton").click(function() {
     //Put people into db
     matches = matchMaker(people);
-
 
   })
 })
