@@ -3,14 +3,19 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href='http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900' rel='stylesheet' type='text/css'>
     <script src="javascripts/jquery.js"></script>
     <script src="javascripts/app.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div id="input" contenteditable="true">Enter your friends names...</div>
-    <div id="addPeopleButton" class="button">Add Friend</div>
-    <div id="outputButton" class="button">Create Group!</div>
+    <div id="main-title"><%= title %></div>
+    <div id="caption">
+      Hi! I'm Julianne, and I'm here to save your Secret Santa party!
+    </div>
+    <div id="input" contenteditable="true" placeholder="Enter a friendly name..."></div>
+    <div id="button-wrapper">
+      <div id="addPeopleButton" class="button">Add Friend</div>
+      <div id="outputButton" class="button">Create Group!</div>
+    </div>
   </body>
 </html>

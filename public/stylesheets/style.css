@@ -1,14 +1,65 @@
+@font-face {
+  font-family: BebasNeue Book;
+  src: url("public/fonts/BebasNeue Book.otf"); }
+@font-face {
+  font-family: BebasNeue Regular;
+  src: url("public/fonts/BebasNeue Regular.otf"); }
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+  background-color: #b9353f; }
+  body div {
+    padding: 0 auto;
+    margin: 0 auto;
+    text-align: center;
+    font: 100% BebasNeue Book, Helvetica, sans-serif; }
 
-a {
-  color: #00B7FF;
-}
+.button {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  font-size: 25px;
+  color: #fff;
+  line-height: 150px;
+  text-align: center;
+  background: #55ca57;
+  display: inline-block; }
 
-.button{
-  width:100px;
-  height:20px;
-  background-color:red;
-}
+.button:hover {
+  cursor: pointer; }
+
+#main-title {
+  padding: 0 auto;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Elsie Swash Caps', cursive;
+  font-size: 300px;
+  color: #f8f0f0;
+  text-shadow: 2px 2px #D64F4F; }
+
+#input[placeholder]:empty:before {
+  content: attr(placeholder);
+  color: #555; }
+
+@media only screen and (max-device-width: 480px) {
+  #main-title {
+    font-size: 300px;
+    text-shadow: 4px 4px #D64F4F;
+    line-height: 230px;
+    margin-bottom: 20px; }
+
+  #caption {
+    padding: 0 auto;
+    margin: 0 auto;
+    color: #fff; }
+
+  .button {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    font-size: 30px;
+    color: #ffe7e7;
+    line-height: 180px;
+    text-align: center;
+    background: #76c574;
+    display: inline-block; } }
+
+/*# sourceMappingURL=style.css.map */

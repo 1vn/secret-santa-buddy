@@ -1,20 +1,29 @@
 var people = []
 $(document).ready(function() {
   $("#addPeopleButton").click(function() {
-    if ($("#input").text() != "Enter your friends names..."){
-    console.log("Button pressed")
-    people.push($("#input").text())
-    console.log(people)
-    $("#input").empty()
-  }
+    getPerson()
   })
 
   $("#outputButton").click(function() {
     //Put people into db
     matches = matchMaker(people);
-
   })
 })
+
+$(document).on('keydown', function(e) {
+  if (e.which == 13 && e.shiftKey == false) {
+    getPerson()
+  }
+})
+
+function getPerson() {
+  if ($("#input").text() != "") {
+    console.log("Button pressed")
+    people.push($("#input").text())
+    console.log(people)
+    $("#input").empty()
+  }
+}
 
 function matchMaker(people) {
   var matches = []
