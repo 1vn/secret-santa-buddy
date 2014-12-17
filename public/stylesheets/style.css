@@ -1,14 +1,16 @@
 @font-face {
   font-family: BebasNeue Book;
-  src: url("public/fonts/BebasNeue Book.otf"); }
+  src: url("../fonts/BebasNeue Book.otf"); }
 @font-face {
   font-family: BebasNeue Regular;
-  src: url("public/fonts/BebasNeue Regular.otf"); }
+  src: url("../fonts/BebasNeue Regular.otf"); }
 body {
+  margin: 0 auto;
+  padding: 0 auto;
   background-color: #b9353f; }
   body div {
-    padding: 0 auto;
     margin: 0 auto;
+    padding: 0 auto;
     text-align: center;
     font: 100% BebasNeue Book, Helvetica, sans-serif; }
 
@@ -21,7 +23,8 @@ body {
   line-height: 150px;
   text-align: center;
   background: #55ca57;
-  display: inline-block; }
+  display: inline-block;
+  font: 100% BebasNeue Regular, BebasNeue Book, Helvetica, sans-serif, sans-serif; }
 
 .button:hover {
   cursor: pointer; }
@@ -37,29 +40,56 @@ body {
 
 #input[placeholder]:empty:before {
   content: attr(placeholder);
-  color: #555; }
+  color: rgba(138, 138, 138, 0.9); }
+
+#input {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+  background-color: white; }
+
+#julianne {
+  display: inline-block; }
+
+#caption {
+  display: inline-block; }
+
+#intro-wrapper {
+  margin: 0 auto;
+  padding: 0 auto;
+  width: 100; }
 
 @media only screen and (max-device-width: 480px) {
   #main-title {
-    font-size: 300px;
+    font-size: 250px;
     text-shadow: 4px 4px #D64F4F;
-    line-height: 230px;
-    margin-bottom: 20px; }
+    line-height: 200px;
+    margin-bottom: 10px; }
 
   #caption {
-    padding: 0 auto;
-    margin: 0 auto;
+    line-height: 50px;
+    font-size: 50px;
+    width: 400px;
+    height: 150px;
     color: #fff; }
 
+  #julianne {
+    width: 400px;
+    height: 400px;
+    background: url("../images/julianne400.png") no-repeat; }
+
+  #input {
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 30px; }
+
   .button {
+    margin: 20px;
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    font-size: 30px;
+    font-size: 50px;
     color: #ffe7e7;
-    line-height: 180px;
-    text-align: center;
-    background: #76c574;
-    display: inline-block; } }
+    line-height: 180px; } }
 
 /*# sourceMappingURL=style.css.map */
