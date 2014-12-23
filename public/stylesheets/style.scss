@@ -60,51 +60,56 @@ body{
 #caption{
 	margin:0 auto;
 	padding:0 auto;
-	text-align:center;
+	text-align:left;
 
+}
+#intro{
+	line-height:100px;
 }
 
 
 @media only screen and (max-device-width: 480px) {
 
 	#main-title{
-		font-size:250px;
-		text-shadow: 4px 4px #D64F4F;
-		line-height:200px;
-		margin-bottom:10px;
+		font-size:80px;
+		text-shadow: 2px 2px #D64F4F;
+		line-height:70px;
 	}
 	#caption{
 		margin-left:20px;
-		font-size:50px;
-		width:400px;
-		height:200px;
+		font-size:20px;
+		width:100px;
+		height:100px;
 		color: #fff;
-
+		display:inline-block;
 	}
 
 	#julianne{
-		margin-left:20px;
-		width:400px;
-		height:400px;
+		width:150px;
+		height:120px;
 		display:inline-block;
 
 		background: url("../images/julianne400.png") no-repeat;
 	}
 
+	#intro{
+		margin-top:10px;
+		line-height:100px;
+	}
+
+
 	#input{
-		margin-top:30px;
 		font-size:30px;
-		margin-bottom:30px;
 	}
 
 	.button{
 		margin:20px;
-		width:200px;
-		height:200px;
-		border-radius:100px;
-		font-size:50px;
+		width: 100px;
+		height:100px;
+		border-radius:50px;
+		font-size:25px;
 		color:#ffe7e7;
-		line-height:180px;
+		line-height:80px;
 		box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 		-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
