@@ -7,7 +7,7 @@
 body {
   margin: 0 auto;
   padding: 0 auto;
-  background-color: #b9353f; }
+  background-color: #D32B5E; }
   body div {
     margin: 0 auto;
     padding: 0 auto;
@@ -35,7 +35,7 @@ body {
   text-align: center;
   font-family: 'Elsie Swash Caps', cursive;
   font-size: 300px;
-  color: #f8f0f0;
+  color: #ffffff;
   text-shadow: 2px 2px #D64F4F; }
 
 #input[placeholder]:empty:before {
@@ -60,7 +60,16 @@ body {
   text-align: left; }
 
 #intro {
+  background-color: #B30E40;
   line-height: 100px; }
+
+#instructions {
+  background-color: #E44F7C;
+  margin: 0 auto;
+  padding: 0 auto; }
+  #instructions div {
+    color: white;
+    text-align: left; }
 
 @media only screen and (max-device-width: 480px) {
   #main-title {
@@ -74,7 +83,8 @@ body {
     width: 100px;
     height: 100px;
     color: #fff;
-    display: inline-block; }
+    display: inline-block;
+    text-shadow: 2px 2px #D64F4F; }
 
   #julianne {
     width: 150px;
@@ -83,11 +93,21 @@ body {
     background: url("../images/julianne400.png") no-repeat; }
 
   #intro {
+    padding: 10px;
     margin-top: 10px;
-    line-height: 100px; }
+    line-height: 30px; }
+
+  #instructions {
+    padding: 10px; }
+    #instructions div {
+      font-size: 20px;
+      text-shadow: 1px 1px #d0d0d0; }
 
   #input {
-    font-size: 30px; }
+    font-size: 30px;
+    -webkit-box-shadow: 2px 10px 46px -9px black;
+    -moz-box-shadow: 2px 10px 46px -9px black;
+    box-shadow: 2px 10px 46px -9px black; }
 
   .button {
     margin: 20px;
