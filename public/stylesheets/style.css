@@ -101,7 +101,8 @@ body {
 #instructions {
   background-color: #E44F7C;
   margin: 0 auto;
-  padding: 0 auto; }
+  padding: 0 auto;
+  width: 100%; }
   #instructions div {
     color: white;
     text-align: left; }
@@ -134,7 +135,6 @@ body {
     line-height: 30px; }
 
   #instructions {
-    width: 100%;
     padding: 10px; }
     #instructions div {
       font-size: 20px;
