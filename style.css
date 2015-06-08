@@ -41,8 +41,11 @@ height:100%; margin:0; padding:0;
 	background:#990033;
 }
 .description{
-	width:50%;
+	width:95%;
 	margin:0 auto;
+}
+.description p{
+	font-size:25px;
 }
 
 body{
@@ -87,37 +90,99 @@ h1{
 	margin-right:-70%;
 	background:#000000;
 }
+.clear{clear:both;}
+
 .footer{height:100px;}
-.santa-block_{margin:0 auto;background:#FFA8CC; padding:100px;}
+.santa-block_{margin:0 auto;background:#ffffff; margin-top:5%;}
 .inprow{
+	text-align:center;
 	margin:0 auto;
-	width:100%;
+	width:95%;
+	margin-bottom:1%;
+	transition:top 300ms;
+	border:1px solid #B0B0B0;
+	border-radius:4px;
+
 }
 .emailfield, .namefield{
-	width:25%;
+	background:#ffffff;
+	width:60%;
 	float:left;
+
 }
 .nameinp, .emailinp{
-	width:100%;
+	font-size:25px;
+	border: none;
+	line-height:45px;
+	width:95%;
 }
+.emailfield{
+	width:50%;
+}
+.buttonrow{
+	margin:0 auto;
+	width:95%;
+}
+.namefield{
+	width:35%;
+	border-right:1px solid #B0B0B0;
+}
+#santa-list{
+	margin-top:4%;
+}
+
 .goodlist{
 	padding-top:10%;
 }
+
+.button{
+width:50%;background-color:#CC0044;
+	text-align:center;
+	border-radius:4px;
+	color: white;
+ 	cursor: pointer;
+	font-size: 30px;
+	padding:20px 0;
+	transition:background 300ms;
+	float:left;
+	display:block;
+}
+.button:hover{
+	background:#B3003C;	transition:background 300ms;
+
+}
+.submit-button{
+	width:50%;
+	background:#3CB300;
+	float:left;
+}
+.submit-button:hover{
+	background:#339900;
+}
+
 @media (max-width:1140px){
-	#header-bar_, #header-bar, #header{height:50px;}
-	.header-shadow{height:52px;}
+	#header-bar_, #header-bar, #header{height:60px;}
+	.header-shadow{height:62px;}
+.santa-block_{padding:30px;}
 	.cwidth{width:100%;}
+	.get-started{width:70%;}
 }
 @media (max-width:669px){
 	.get-started{width:50%;}
+	.inprow{width:100%}
+	.buttonrow{width:100%;}
 }
 @media (max-width: 566px){
+		#header-bar_, #header-bar, #header{height:50px;}
+		.namefield, .emailfield{width:48%;margin-right:1%;}
+	.header-shadow{height:52px;}
 	h1{font-size:35px;}
-	.title-block{font-size:25px;}
-	.santa-block_{padding:50px;}
+ .title-block{font-size:25px;}
+.santa-block_{padding:10px;}
 	.mmenu-button{
 		display:block;
 	}
+		.button, p{font-size:15px;}
 	.description{width:100%;}
 	.get-started{width:95%;}
 }
