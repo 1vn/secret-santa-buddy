@@ -100,7 +100,7 @@ h1{
 	margin:0 auto;
 	width:95%;
 	margin-bottom:1%;
-	transition:top 300ms;
+	transition:top 300ms, opacity 400ms;
 	border:1px solid #B0B0B0;
 	border-radius:4px;
 
@@ -126,6 +126,7 @@ h1{
 .buttonrow{
 	margin:0 auto;
 	width:95%;
+	transition: all 300ms;
 }
 .namefield{
 	width:35%;
@@ -168,9 +169,9 @@ width:50%;background-color:#CC0044;
 }
 .warningtext{
 	line-height:45px;
-	display:none;
 	color:#ffffff;
 	font-size:25px;
+	width:100%;
 }
 
 .fa-check:hover, .fa-times:hover,.fa-chevron-down:hover{
@@ -193,12 +194,13 @@ width:50%;background-color:#CC0044;
 	background:#339900;
 }
 .inperror{border:3px solid red;}
-.warningtext,.santaoptions{
+.santaoptions{
 	text-align:center;
 	width:100%;
 	height:5px;
 	background:#b0b0b0;
 	transition:height 300ms;
+	overflow:hidden;
 }
 @media (max-width:1140px){
 	#header-bar_, #header-bar, #header{height:60px;}

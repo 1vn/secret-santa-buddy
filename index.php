@@ -22,7 +22,7 @@ include 'header.php';
 				<div id="santa-list">
 					<div class="inprow" id="row0">
 						<div class="namefield" id="namefield0"><span><input id="nameinp0" class="nameinp" placeholder="Name"></span></div>
-						<div class="emailfield" id="emailfield0"><span><input id="emailinp0" class="emailinp" placeholder="Email" type="email"></span></div>
+						<div class="emailfield" id="emailfield0"><span><input id="emailinp0" class="emailinp" placeholder="Email" type="email" onkeypress="addsanta(event)"></span></div>
 						<div class="santaoptionsbutton"><i class="fa fa-times" onclick="showsantaoptions(0)"></i></div>
 						<div class="clear"></div>
 						<!-- <div class="santaoptionsbutton"><i class="fa fa-chevron-down" onclick="showsantaoptions(0)"></i></div>					!-->
