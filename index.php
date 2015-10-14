@@ -20,18 +20,24 @@ include 'header.php';
 				<p>Simply enter the names and emails of the other Secret Santas and press send! Our elves will arrange the gift giving and send everyone an email with who they'll need to surprise!</p>
 				</div>
 				<div id="santa-list">
-				<div class="inprow">
-					<div class="namefield"><span><input id="nameinp0" class="nameinp" placeholder="Name"></span></div>
-					<div class="emailfield"><span><input id="emailinp0" class="emailinp" placeholder="Email"></span></div>
-					<div class="clear"></div>
+					<div class="inprow" id="row0">
+						<div class="namefield" id="namefield0"><span><input id="nameinp0" class="nameinp" placeholder="Name"></span></div>
+						<div class="emailfield" id="emailfield0"><span><input id="emailinp0" class="emailinp" placeholder="Email" type="email"></span></div>
+						<div class="santaoptionsbutton"><i class="fa fa-times" onclick="showsantaoptions(0)"></i></div>
+						<div class="clear"></div>
+						<!-- <div class="santaoptionsbutton"><i class="fa fa-chevron-down" onclick="showsantaoptions(0)"></i></div>					!-->
+						<div class="santaoptions" id="santaoptions0">
+						<div class="warningtext" id="warning0">Are you sure you want to remove this Santa?&nbsp;&nbsp;<i class="fa fa-check" onclick="removesanta(0)"></i>&nbsp;&nbsp;<i class="fa fa-times" onclick="showsantaoptions(0)"></i></div>
+						</div>
 					</div>
 				</div>
 				<div class="buttonrow">
-					<div class="button" onclick="addsanta()">Add Santa</div>	
-					<div class="button submit-button" onclick="secretsanta()">Send</div>
+					<div class="button" onclick="addsanta()">Add Santa&nbsp;&nbsp;<i class="fa fa-plus"></i></div>	
+					<div class="button submit-button" onclick="santasend()">Send&nbsp;&nbsp;<i class="fa fa-envelope-o"></i></div>
 				</div>
 		</div>
-</div>
+	</div>
+	<div id="santaresult"></div>
 	<div class="footer">
 	</div>
 <?php
