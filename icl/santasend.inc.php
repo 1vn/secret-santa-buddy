@@ -14,7 +14,8 @@ function santasend(){
 	for($i=0; $i<count($namelist)-1;$i++){
 		$matches[$namelist[$i]]=array("target"=>$namelist[$i+1], "email"=>$nameemail[$namelist[$i]]);
 	}
-
+	$sendgrid = new SendGrid(SENDGRID_USER, SENDGRID_KEY);
+	$email = new SendGrid\Email();
 	foreach($matches as $name=>$targetobj){
 		$targetname=$targetobj['target'];
 		$subject="Your Gift Target - Secret Santa Buddy!";
