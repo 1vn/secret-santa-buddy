@@ -12,9 +12,13 @@ function santasend(){
 	shuffle($namelist);
 	$matches[$namelist[count($namelist)-1]]=array("name"=>$namelist[0], "email"=>$nameemail[$namelist[0]]);
 	for($i=0; $i<count($namelist)-1;$i++){
-		$matches[$namelist[$i]]=array("name"=>$namelist[$i+1], "email"=>$nameemail[$namelist[$i+1]]);
+		$matches[$namelist[$i]]=array("target"=>$namelist[$i+1], "email"=>$nameemail[$namelist[$i]]);
 	}
-	print_r($matches);
 
+	foreach($matches as $name=>$targetobj){
+		$targetname=$targetobj['target'];
+		$subject="Your Gift Target - Secret Santa Buddy!";
+		$body="Hi $name, you're going to be gifting $targetname! Enjoy your christmas!!!";
+	}
 }
 ?>
