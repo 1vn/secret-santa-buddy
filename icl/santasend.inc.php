@@ -1,8 +1,10 @@
 <?php
 function santasend(){
+	$pnamelist=$_POST['namelist'];
+	$pemaillist=$_POST['emaillist'];
 	$namelist=explode(",", $_POST['namelist']);
 	$emaillist=explode(",", $_POST['emaillist']);
-	if(count($pnamelist) == 0 || $pemaillist == 0){
+	if(count($pnamelist) == 0 || count($pemaillist) == 0){
 		header('Content-Type: application/json');
 		echo json_encode(array("success"=>0));
 		die();
