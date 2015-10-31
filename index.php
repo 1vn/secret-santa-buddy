@@ -19,7 +19,7 @@ include 'header.php';
 		<div id="santa-block" class="santa-block">
 				<h1>Santa List</h1>
 				<div class="description">
-				<p>Simply enter the names and emails of the other Secret Santas and press send! Our elves will arrange the gift giving and send everyone an email with who they'll need to surprise!</p>
+				<p>Simply enter the names and emails of the other Secret Santas and press send. Our elves will arrange the gift giving and send everyone an email with who they'll need to surprise!</p>
 				</div>
 				<div id="santa-list">
 					<div class="inprow" id="row0">

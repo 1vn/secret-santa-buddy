@@ -177,7 +177,7 @@ width:50%;background-color:#CC0044;
 }
 
 .fa-check:hover, .fa-times:hover,.fa-chevron-down:hover{
-	color:#000000;
+	color:#CC0044;
 }
 .santaoptionsbutton{
 	color:#B0B0B0;
@@ -224,9 +224,7 @@ width:50%;background-color:#CC0044;
 	h1{font-size:35px;}
  .title-block{font-size:25px;}
 .santa-block_{padding:10px;}
-	.mmenu-button{
-		display:block;
-	}	
+	/**.mmenu-button{display:block;}	**/
 	.warningtext{font-size:15px; line-height:30px;}
 	.button, p{font-size:15px;}
 	.description{width:100%;}

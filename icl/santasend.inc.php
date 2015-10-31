@@ -2,6 +2,11 @@
 function santasend(){
 	$namelist=explode(",", $_POST['namelist']);
 	$emaillist=explode(",", $_POST['emaillist']);
+	if(count($pnamelist) == 0 || $pemaillist == 0){
+		header('Content-Type: application/json');
+		echo json_encode(array("success"=>0));
+		die();
+	}
 	$nameemail=array();
 	foreach($namelist as $idx=>$name){
 		$nameemail[$name]=$emaillist[$idx];
@@ -37,6 +42,6 @@ function santasend(){
 
 	}
 	header('Content-Type: application/json');
-	echo json_encode(array("success"=>"true"));
+	echo json_encode(array("success"=>1));
 }
 ?>
