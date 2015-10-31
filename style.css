@@ -176,8 +176,11 @@ width:50%;background-color:#CC0044;
 	width:100%;
 }
 
-.fa-check:hover, .fa-times:hover,.fa-chevron-down:hover{
+.fa-times:hover,.fa-chevron-down:hover{
 	color:#CC0044;
+}
+.fa-check:hover{
+	color:#339900
 }
 .santaoptionsbutton{
 	color:#B0B0B0;
