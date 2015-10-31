@@ -98,9 +98,48 @@ function santasend(){
 	santas.push("emaillist="+emaillist);
 	santas.push('santacount='+j);
 	if(valid){
-		ajxpgn('santaresult', 'services.php?cmd=santasend&'+santas.join('&'), 0, 0, santas.join('&'));
+		//ajxpgn('santaresult', 'services.php?cmd=santasend&'+santas.join('&'), 0, 0, santas.join('&'));
+		var rq=xmlHTTPRequestObject();
+		var f=function(c){return function(){
+				if(rq.readyState == 4){
+					console.log("success");
+				}
+
+			}
+		}
+		rq.onreadystatechange=f();
+		rq.open('POST','services.php?cmd=santasend&hb='+hb(),true);
+		rq.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=utf-8');
+		rq.send(santas.join("&")); 
 	}
 }
  
+function encodeHTML(code){
+	code=escape(code);
+	code=code.replace(/\//g,"%2F");
+	code=code.replace(/\?/g,"%3F");
+	code=code.replace(/=/g,"%3D");
+	code=code.replace(/&/g,"%26");
+	code=code.replace(/@/g,"%40");
+	code=code.replace(/\+/g,"%2B");
+	return code;
+}
+
+function xmlHTTPRequestObject() {
+	var obj = false;
+	var objs = ["Microsoft.XMLHTTP","Msxml2.XMLHTTP","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP.4.0"];
+	var success = false;
+	for (var i=0; !success && i < objs.length; i++) {
+		try {
+			obj = new ActiveXObject(objs[i]);
+			success = true;
+		} catch (e) { obj = false; }
+	}
+
+	if (!obj) obj = new XMLHttpRequest();
+	return obj;
+}
+
+function hb(){var now=new Date(); var hb=now.getTime();return hb;}
 
 var gid=function(d){return document.getElementById(d);}
