@@ -72,6 +72,10 @@ function showsantaoptions(santa, show){
 	//showwarning(santa)
 }
 
+function animatesend(){
+	
+}
+
 function santasend(){
 	var santas=[];
 	var errors=[];
@@ -98,11 +102,18 @@ function santasend(){
 	santas.push("emaillist="+emaillist);
 	santas.push('santacount='+j);
 	if(valid){
+		animatesend()
 		//ajxpgn('santaresult', 'services.php?cmd=santasend&'+santas.join('&'), 0, 0, santas.join('&'));
 		var rq=xmlHTTPRequestObject();
 		var f=function(c){return function(){
 				if(rq.readyState == 4){
-					console.log("success");
+					rs=JSON.parse(rq.responseText);
+					console.log(rs["success"]);
+					if(rs["success"]){
+
+					} else {
+
+					}
 				}
 
 			}
