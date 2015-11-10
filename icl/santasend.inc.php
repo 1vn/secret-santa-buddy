@@ -40,7 +40,7 @@ function santasend(){
       ->setSubject($subject)
       ->setHtml($body);
 
-		//$sendgrid->send($email);
+		$sendgrid->send($email);
 
 	}
 	header('Content-Type: application/json');
