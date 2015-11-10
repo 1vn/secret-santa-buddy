@@ -22,7 +22,6 @@
 				<div class="cwidth">
 					<div id="header-bar">
 							<a href="index.php"></a>
-							<div class="mmenu-button" onclick="showmmenu"><span class="fa fa-bars fa-3x"></span></div>
 					</div>
 				</div>
 			</div>

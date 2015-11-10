@@ -1,167 +1,57 @@
-#header-bar{
-	width:95%;
-	margin:0 auto;
-	color:#C9C9C9;
-}
-#header-bar_{
-	position:absolute;
-	background:#CC0044;
-	color:black;
-	height:75px;
-	width:100%;
-	top:0;left:0;
-	transition: height 450ms;
-		z-index:100;
-
-}
-.header-shadow{
-	position:absolute;
-	top:0;left:0;
-	background:#B0B0B0;
-	height:77px;
-	width:100%;
-	opacity:0.5;
-	transition: height 500ms;
-}	
-.get-started{
-	width:20%;
-	margin:0 auto;
-	text-decoration:none;
-	font-size:30px;
-	color:white;
-	background:#990033;
-	border-radius:4px;
-	padding:5px 5px;
-	cursor:pointer;
-	transition: background 300ms;
-	border-bottom:2px solid #B0B0B0;
-}
-html, body {
-height:100%; margin:0; padding:0; 
-}
-.get-started:hover{
-	background:#CC0044;
-}
-.description{
-	width:95%;
-	margin:0 auto;
-}
-.description p{
-	font-size:25px;
-}
-
-body{
-		font-family: Helvetica, sans-serif;
-		overflow:hidden;
-}
-#header{
-	width:100%;
-	height:75px;
-}
-
-.cwidth{
-	width:1100px;
-	margin: 0 auto;
-}
-.title-block_{
-	padding:30px;
-	margin-bottom:0;
-}
-
-.title-block_, .santa-block{height:100%;}
-.title-block{
-	margin-top:10%;
-	width:100%;
-	font-size:50px;
-	text-align:center;
-}
-.mmenu-button{
-	cursor:pointer;
-	float:right;
-	display:none;
-	color:#ffffff;
-}
-h1{
-	text-align:center;
-	font-size:70px;
-}
-.mmenu{
-	width:30%;
-	position:fixed;
-	top:0;
-	right:0;
-	margin-right:-70%;
-	background:#000000;
-}
+/* General stuff */
+html, body {height:100%; margin:0; padding:0;}
+body{font-family: Helvetica, sans-serif;overflow-x:hidden;}
+.cwidth{width:1100px;margin: 0 auto;}
+h1{text-align:center;font-size:70px;}
 .clear{clear:both;}
 
+/* Header stuff */
+#header-bar{width:95%;margin:0 auto;color:#C9C9C9;}
+#header-bar_{position:absolute;background:#CC0044;color:black;height:75px;width:100%;top:0;left:0;transition: height 450ms;z-index:100;}
+.header-shadow{position:absolute;top:0;left:0;background:#B0B0B0;height:77px;width:100%;opacity:0.5;transition: height 500ms;}	
+#header{width:100%;height:75px;}
+
+/* Get started button */
+.get-started{width:20%;margin:0 auto;text-decoration:none;font-size:30px;color:white;background:#990033;border-radius:4px;padding:5px 5px;cursor:pointer;transition: background 300ms;border-bottom:2px solid #B0B0B0;}
+.get-started:hover{background:#CC0044;}
+
+/* Description area */
+.description{width:95%;margin:0 auto;}
+.description p{font-size:25px;}
+
+/* Title section */
+.title-block_{padding:30px;margin-bottom:0;}
+.title-block_, .santa-block{height:100%;}
+.title-block{margin-top:10%;width:100%;font-size:50px;text-align:center;}
+
+/* Footer */
 .footer{height:100px;}
 .santa-block_{margin:0 auto;background:#ffffff;}
-.inprow{
-	text-align:center;
-	margin:0 auto;
-	width:95%;
-	margin-bottom:1%;
-	transition:top 300ms, opacity 400ms;
-	border:1px solid #B0B0B0;
-	border-radius:4px;
 
-}
-
-
-/* julianne stuff */
-
-#julianne{
-	position:absolute;
-	top:0px;
-	opacity:0;
-	left:0px;
-	transition: top 2000ms, left 2000ms, opacity 2000ms;
-}
-
-#julianne-msg{
-	position:absolute;
-	top:100px;
-	left:180px;
-	font-size:16px;
-	width:200px;
-}
-
-#julianne-img{
-	width:200px;
-	height:200px;
-}
-
-
-
-
+/* Input stuff */
+.inprow{text-align:center;margin:0 auto;width:95%;margin-bottom:1%;transition:top 300ms, opacity 400ms;border:1px solid #B0B0B0;border-radius:4px;}
 .emailfield, .namefield{
 	background:#ffffff;
 	width:60%;
 	float:left;
 
 }
-.nameinp, .emailinp{
-	font-size:25px;
-	border: none;
-	line-height:45px;
-	width:95%;
-}
-.nameinp:focus, .emailinp:focus{    
-	outline: 0;
-}
-.emailfield{
-	width:45%;
-}
-.buttonrow{
-	margin:0 auto;
-	width:95%;
-	transition: all 300ms;
-}
-.namefield{
-	width:35%;
-	border-right:1px solid #B0B0B0;
-}
+.nameinp, .emailinp{font-size:25px;border: none;line-height:45px;width:95%;}
+.nameinp:focus, .emailinp:focus{outline: 0;}
+.emailfield{width:45%;}
+.namefield{width:35%;border-right:1px solid #B0B0B0;}
+
+/* Button stuff */
+.buttonrow{margin:0 auto;width:95%;transition: all 300ms;}
+.button{width:50%;background-color:#CC0044;text-align:center;border-radius:4px;color: white;cursor: pointer;font-size: 30px;padding:20px 0;transition:background 300ms, width 300ms;float:left;display:block;overflow:hidden;}
+.button:hover{background:#B3003C;	transition:background 300ms;}
+
+/* julianne stuff */
+
+#julianne{position:absolute;top:50%;opacity:0;left:45%;transition: top 2000ms, left 2000ms, opacity 2000ms;}
+#julianne-msg{position:absolute;top:100px;left:180px;font-size:16px;width:200px;}
+#julianne-img{width:200px;height:200px;}
+
 
 #santa-list{
 	margin-top:4%;
@@ -173,23 +63,7 @@ h1{
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
-.button{
-width:50%;background-color:#CC0044;
-	text-align:center;
-	border-radius:4px;
-	color: white;
- 	cursor: pointer;
-	font-size: 30px;
-	padding:20px 0;
-	transition:background 300ms, width 300ms;
-	float:left;
-	display:block;
-	overflow:hidden;
-}
-.button:hover{
-	background:#B3003C;	transition:background 300ms;
 
-}
 .fa-check, .fa-times, .fa-chevron-down{
 	cursor:pointer;	transition:color 300ms;
 

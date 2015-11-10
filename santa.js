@@ -89,8 +89,7 @@ function animatesuccess(){
 	var julianne = gid("julianne");
 	var msg = gid("julianne-msg");
 	msg.innerHTML="Success, the elves are on their way!";
-	gid("buttonrow").style.display="none";
-	setTimeout(function(){msg.innerHTML = "";julianimate()}, 2000);
+	setTimeout(function(){msg.innerHTML = "Thank you for using Secret Santa Buddy!";julianimate();gid("buttonrow").style.display="none";}, 2000);
 
 }
 
