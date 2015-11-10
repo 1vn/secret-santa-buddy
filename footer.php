@@ -5,5 +5,6 @@
 <script>
 window.santas=0;
 window.santacount=0;
+julianimate();
 </script>
 </html>

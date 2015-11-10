@@ -5,6 +5,7 @@ include 'header.php';
 ?>
 	<div id="title-block" class="title-block_">	
 		<div class="title-block">
+				<img id="julianne" src="julianne.png">
 				<h1>Secret Santa Buddy</h1>
 				<div class="description">
 					<p>Gift giving of the future!</p> <br>
@@ -33,9 +34,9 @@ include 'header.php';
 						</div>
 					</div>
 				</div>
-				<div class="buttonrow">
-					<div class="button" onclick="addsanta()">Add Santa&nbsp;&nbsp;<i class="fa fa-plus"></i></div>	
-					<div class="button submit-button" onclick="santasend()">Send&nbsp;&nbsp;<i class="fa fa-envelope-o"></i></div>
+				<div class="buttonrow" id="buttonrow">
+					<div class="button" onclick="addsanta()" id="add">Add Santa&nbsp;&nbsp;<i class="fa fa-plus"></i></div>	
+					<div class="button submit-button" onclick="santasend()" id="send">Send&nbsp;&nbsp;<i class="fa fa-envelope-o"></i></div>
 				</div>
 		</div>
 	</div>

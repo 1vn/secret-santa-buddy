@@ -73,7 +73,25 @@ function showsantaoptions(santa, show){
 }
 
 function animatesend(){
-	
+	var julianne = gid("julianne");
+	var buttonrow = gid("buttonrow");
+	clearInterval(window.julianneinterval);
+	var viewportOffset = buttonrow.getBoundingClientRect();
+	julianne.style.top=viewportOffset.top;
+}
+
+
+window.julianneinterval;
+function julianimate(){
+	var julianne = gid("julianne");
+	julianne.style.opacity=1;
+	julianneinterval = setInterval(function(){
+		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+		julianne.style.left=Math.random()*w-200+"px";
+		julianne.style.top=Math.random()*h/2+"px";
+		}
+	,Math.random()*1000+500);
 }
 
 function santasend(){
@@ -108,11 +126,10 @@ function santasend(){
 		var f=function(c){return function(){
 				if(rq.readyState == 4){
 					rs=JSON.parse(rq.responseText);
-					console.log(rs["success"]);
 					if(rs["success"]){
-
+						console.log("success");
 					} else {
-
+						console.log("failed");
 					}
 				}
 
