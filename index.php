@@ -5,18 +5,21 @@ include 'header.php';
 ?>
 	<div id="title-block" class="title-block_">	
 		<div class="title-block">
-				<img id="julianne" src="julianne.png">
+				<div id="julianne">
+					<img id="julianne-img" src="julianne.png">
+					<span id="julianne-msg"></span>
+				</div>
 				<h1>Secret Santa Buddy</h1>
 				<div class="description">
-					<p>Gift giving of the future!</p> <br>
+					<p><i>Gift giving of the future!</i></p> <br>
 				</div>
-				<div class="get-started" onclick="nextpage('santa-block')">
+				<div class="get-started" onclick="nextpage('santa-block_')">
 						Let's get started!
 				</div>
 		</div>
 	</div>
 	<div class="cwidth">
-	<div id="santa-block" class="santa-block_">
+	<div id="santa-block_" class="santa-block_">
 		<div id="santa-block" class="santa-block">
 				<h1>Santa List</h1>
 				<div class="description">

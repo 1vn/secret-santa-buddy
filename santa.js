@@ -1,9 +1,12 @@
 var scrollTimer;
 function nextpage(id){
-	var target=gid(id).offsetHeight;
+	var target=gid(id).offsetTop;
+	var targetheight=gid(id).offsetHeight;
 	var factor=1
+	var lastscroll;
 	scrollTimer=setInterval(function(){
-		if(window.scrollY<=target){
+		if(window.scrollY<=target && lastscroll != window.scrollY){
+			lastscroll = window.scrollY;
 			window.scrollTo(0, (window.scrollY+1*factor))
 			factor+=0.25;
 		}
@@ -74,10 +77,21 @@ function showsantaoptions(santa, show){
 
 function animatesend(){
 	var julianne = gid("julianne");
+	var msg = gid("julianne-msg");
 	var buttonrow = gid("buttonrow");
 	clearInterval(window.julianneinterval);
-	var viewportOffset = buttonrow.getBoundingClientRect();
-	julianne.style.top=viewportOffset.top;
+	julianne.style.top=buttonrow.offsetTop+"px";
+	julianne.style.left=buttonrow.offsetLeft+"px";
+	msg.innerHTML="Sending...";
+}
+
+function animatesuccess(){
+	var julianne = gid("julianne");
+	var msg = gid("julianne-msg");
+	msg.innerHTML="Success, the elves are on their way!";
+	gid("buttonrow").style.display="none";
+	setTimeout(function(){msg.innerHTML = "";julianimate()}, 2000);
+
 }
 
 
@@ -88,10 +102,10 @@ function julianimate(){
 	julianneinterval = setInterval(function(){
 		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
 		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-		julianne.style.left=Math.random()*w-200+"px";
+		julianne.style.left=Math.random()*w+"px";
 		julianne.style.top=Math.random()*h/2+"px";
 		}
-	,Math.random()*1000+500);
+	,Math.random()*500+2000);
 }
 
 function santasend(){
@@ -127,7 +141,7 @@ function santasend(){
 				if(rq.readyState == 4){
 					rs=JSON.parse(rq.responseText);
 					if(rs["success"]){
-						console.log("success");
+						setTimeout(animatesuccess, 3000);
 					} else {
 						console.log("failed");
 					}
