@@ -19,7 +19,7 @@ function santasend(){
 	//echo "<pre>";print_r($namelist);echo "</pre>";
 	//echo "<pre>";print_r($nameemail);echo "</pre>";
 	shuffle($namelist);
-	for($i=0; $i<count($namelist);$i++){
+	for($i=0; $i<count($namelist)-1;$i++){
 		$matches[$namelist[$i]]=array("target"=>$namelist[$i+1], "email"=>$nameemail[$namelist[$i]]);
 	}
 	$matches[$namelist[count($namelist)-1]]=array("target"=>$namelist[0], "email"=>$nameemail[$namelist[count($namelist)-1]]);
