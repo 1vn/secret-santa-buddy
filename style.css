@@ -7,8 +7,8 @@ h1{text-align:center;font-size:70px;}
 
 /* Header stuff */
 #header-bar{width:95%;margin:0 auto;color:#C9C9C9;}
-#header-bar_{position:absolute;background:#CC0044;color:black;height:75px;width:100%;top:0;left:0;transition: height 450ms;z-index:100;}
-.header-shadow{position:absolute;top:0;left:0;background:#B0B0B0;height:77px;width:100%;opacity:0.5;transition: height 500ms;}	
+#header-bar_{position:fixed;background:#CC0044;color:black;height:75px;width:100%;top:0;left:0;transition: height 450ms;z-index:100;}
+.header-shadow{position:fixed;top:0;left:0;background:#B0B0B0;height:77px;width:100%;opacity:0.5;transition: height 500ms;}	
 #header{width:100%;height:75px;}
 
 /* Get started button */
@@ -21,7 +21,7 @@ h1{text-align:center;font-size:70px;}
 
 /* Title section */
 .title-block_{padding:30px;margin-bottom:0;}
-.title-block_, .santa-block{height:100%;}
+.title-block_, .santa-block{height:100%;margin-bottom:300px;}
 .title-block{margin-top:10%;width:100%;font-size:50px;text-align:center;}
 
 /* Footer */
@@ -48,7 +48,7 @@ h1{text-align:center;font-size:70px;}
 
 /* julianne stuff */
 
-#julianne{position:absolute;top:50%;opacity:0;left:45%;transition: top 2000ms, left 2000ms, opacity 2000ms;}
+#julianne{position:absolute;top:200px;opacity:0;left:45%;transition: top 2000ms, left 2000ms, opacity 2000ms;}
 #julianne-msg{position:absolute;top:100px;left:180px;font-size:16px;width:200px;}
 #julianne-img{width:200px;height:200px;}
 
