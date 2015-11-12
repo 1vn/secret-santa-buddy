@@ -90,7 +90,7 @@ function animatesuccess(){
 	var julianne = gid("julianne");
 	var msg = gid("julianne-msg");
 	msg.innerHTML="Success, the elves are on their way!";
-	setTimeout(function(){msg.innerHTML = "Thank you for using Secret Santa Buddy!";julianimate();gid("buttonrow").style.display="none";}, 2000);
+	setTimeout(function(){msg.innerHTML = "Thank you for using Secret Santa Buddy!";julianimate();}, 2000);
 
 }
 
@@ -151,9 +151,10 @@ function santasend(){
 				if(rq.readyState == 4){
 					rs=JSON.parse(rq.responseText);
 					if(rs["success"]){
+						gid("buttonrow").style.display="none";
 						setTimeout(animatesuccess, 3000);
 					} else {
-						console.log("failed");
+						gid("buttonrow").style.display="block";
 					}
 				}
 

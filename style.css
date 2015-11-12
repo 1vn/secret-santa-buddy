@@ -75,6 +75,9 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
 	.get-started{width:50%;}
 	.inprow{width:95%}
 	.buttonrow{width:95%;}
+	#julianne{position:absolute;top:100px;opacity:0;left:45%;transition: top 2000ms, left 2000ms, opacity 2000ms;}
+	#julianne-msg{position:absolute;top:50px;left:90px;font-size:16px;width:200px;}
+	#julianne-img{width:100px;height:100px;}
 }
 @media (max-width: 566px){
 	#header-bar_, #header-bar, #header{height:50px;}
