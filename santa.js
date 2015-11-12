@@ -6,7 +6,7 @@ function nextpage(id){
 	var factor=1
 	var lastscroll;
 	scrollTimer=setInterval(function(){
-		if(window.scrollY<=target-headerbar && lastscroll != window.scrollY){
+		if(window.scrollY<=target-target/6 && lastscroll != window.scrollY){
 			lastscroll = window.scrollY;
 			window.scrollTo(0, (window.scrollY+1*factor))
 			factor+=0.25;
