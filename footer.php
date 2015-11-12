@@ -6,5 +6,6 @@
 window.santas=0;
 window.santacount=0;
 julianimate();
+scaleblocks();
 </script>
 </html>

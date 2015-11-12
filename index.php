@@ -3,7 +3,7 @@ include 'preheader.php';
 include 'header.php';
 
 ?>
-	<div id="title-block" class="title-block_">	
+	<div id="title-block" class="full-block_">	
 		<div class="title-block">
 				<div id="julianne">
 					<img id="julianne-img" src="julianne.png">
@@ -19,7 +19,7 @@ include 'header.php';
 		</div>
 	</div>
 	<div class="cwidth">
-	<div id="santa-block_" class="santa-block_">
+	<div id="santa-block_" class="full-block_">
 		<div id="santa-block" class="santa-block">
 				<h1>Santa List</h1>
 				<div class="description">

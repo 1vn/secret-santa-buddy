@@ -2,10 +2,11 @@ var scrollTimer;
 function nextpage(id){
 	var target=gid(id).offsetTop;
 	var targetheight=gid(id).offsetHeight;
+	var headerbar=gid('header-bar_').offsetHeight;
 	var factor=1
 	var lastscroll;
 	scrollTimer=setInterval(function(){
-		if(window.scrollY<=target && lastscroll != window.scrollY){
+		if(window.scrollY<=target-headerbar && lastscroll != window.scrollY){
 			lastscroll = window.scrollY;
 			window.scrollTo(0, (window.scrollY+1*factor))
 			factor+=0.25;
@@ -105,6 +106,16 @@ function julianimate(){
 		julianne.style.top=Math.random()*h/2+"px";
 		}
 	,Math.random()*500+2000);
+}
+
+function scaleblocks(){
+	var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+	blocks = gid('page').getElementsByTagName("div");
+	for(var i = 0; i < blocks.length; i++){
+		if(blocks[i].className == "full-block_"){
+			blocks[i].style.height=h+"px";
+		}
+	}
 }
 
 function santasend(){
