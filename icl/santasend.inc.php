@@ -4,6 +4,7 @@ function santasend(){
 	$pemaillist=$_POST['emaillist'];
 	$namelist=explode(",", $_POST['namelist']);
 	$emaillist=explode(",", $_POST['emaillist']);
+	$minamt=$_POST['minamt']+0;
 	if(count($pnamelist) == 0 || count($pemaillist) == 0){
 		header('Content-Type: application/json');
 		echo json_encode(array("success"=>0));
@@ -14,6 +15,9 @@ function santasend(){
 		$nameemail[$name]=$emaillist[$idx];
 	}	
 
+	if($minamt > 0){
+		$pricenotice="The minimum amount for the gift should be \$$minamt.";
+	}
 	$matches=array();
 	//echo "<pre>";print_r($emaillist);echo "</pre>";
 	//echo "<pre>";print_r($namelist);echo "</pre>";
@@ -31,7 +35,7 @@ function santasend(){
 		$subject="Your Gift Target - Secret Santa Buddy!";
 		$body="Hi $name, <br>
 		<br>
-		You're going to be gifting $targetname!<br>
+		You're going to be gifting $targetname! $pricenotice<br>
 		<br>
 		Happy Holidays!<br><br>
 		<i>This email was sent using the <a href='http://www.ivanzhang.ca/secret-santa-buddy'>Secret Santa Buddy</a> app by <a href='http://www.ivanzhang.ca'>Ivan Zhang</a></i>";

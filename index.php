@@ -26,8 +26,9 @@ include 'header.php';
 				<p>Simply enter the names and emails of the other Secret Santas and press send. Our elves will arrange the gift giving and send everyone an email with who they'll need to surprise!</p>
 				</div>
 				<div id="santa-options">
-					<div id="price-range">
-						<input type="range" id="price-range" onchange="updaterangevalue">
+					<div class="fielddesc">Mininum Amount</div>
+					<div id="price-range" class="inprow">
+						$<input type="text" id="minamt" onchange="updaterangevalue" placeholder="0.00" title="Everyone has to spend at least this amount.">
 					</div>
 				</div>
 				<div id="santa-list">

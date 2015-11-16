@@ -97,8 +97,8 @@ function animatesuccess(){
 function animatefail(){
 	var julianne = gid("julianne");
 	var msg = gid("julianne-msg");
-	msg.innerHTML="Success, the elves are on their way!";
-	setTimeout(function(){msg.innerHTML = "Thank you for using Secret Santa Buddy!";julianimate();}, 2000);
+	msg.innerHTML="Sending failed :(";
+	setTimeout(function(){msg.innerHTML = "Please try again.";julianimate();}, 2000);
 
 }
 
@@ -142,8 +142,8 @@ function santasend(){
 		if(gid('row'+i)){
 			var name=encodeHTML(gid('nameinp'+i).value);
 			var email=encodeHTML(gid('emailinp'+i).value);
-			if(!name){gid('row'+i).className+=" inperror";valid=false;}else{gid('row'+i).className="inprow"}
-			if(!email){gid('row'+i).className+=" inperror";valid=false;}else{gid('row'+i).className="inprow"}
+			if(!name){gid('row'+i).className="inprow inperror";valid=false;}else{gid('row'+i).className="inprow"}
+			if(!email){gid('row'+i).className="inprow inperror";valid=false;}else{gid('row'+i).className="inprow"}
 			//santas.push("name"+j+"="+name);
 			//santas.push("email"+j+"="+email);
 			namelist+=name+",";
@@ -151,13 +151,16 @@ function santasend(){
 			j++;
 		}
 	}
+	var minamt=encodeHTML(gid("minamt").value);
+	if(!minamt.match(/^\d+$/)){gid("price-range").className="inprow inperror";valid=false;}else{gid("price-range").className="inprow"}
 	namelist=namelist.substr(0, namelist.length-1);
 	emaillist=emaillist.substr(0, emaillist.length-1);
 	santas.push("namelist="+namelist);
 	santas.push("emaillist="+emaillist);
-	santas.push('santacount='+j);
+	santas.push("santacount="+j);
+	santas.push("minamt="+minamt);
 	if(valid){
-		gid("buttonrow").style.display="none";
+		gid("buttonrow").style.opacity=0;
 		animatesend()
 		//ajxpgn('santaresult', 'services.php?cmd=santasend&'+santas.join('&'), 0, 0, santas.join('&'));
 		var rq=xmlHTTPRequestObject();
@@ -177,6 +180,7 @@ function santasend(){
 		rq.open('POST','services.php?cmd=santasend&hb='+hb(),true);
 		rq.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=utf-8');
 		rq.send(santas.join("&")); 
+		gid("buttonrow").style.display="none";
 	}
 }
  
