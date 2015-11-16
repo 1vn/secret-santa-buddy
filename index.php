@@ -25,6 +25,11 @@ include 'header.php';
 				<div class="description">
 				<p>Simply enter the names and emails of the other Secret Santas and press send. Our elves will arrange the gift giving and send everyone an email with who they'll need to surprise!</p>
 				</div>
+				<div id="santa-options">
+					<div id="price-range">
+						<input type="range" id="price-range" onchange="updaterangevalue">
+					</div>
+				</div>
 				<div id="santa-list">
 					<div class="inprow" id="row0">
 						<div class="namefield" id="namefield0"><span><input id="nameinp0" class="nameinp" placeholder="Name"></span></div>

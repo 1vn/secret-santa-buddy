@@ -94,6 +94,14 @@ function animatesuccess(){
 
 }
 
+function animatefail(){
+	var julianne = gid("julianne");
+	var msg = gid("julianne-msg");
+	msg.innerHTML="Success, the elves are on their way!";
+	setTimeout(function(){msg.innerHTML = "Thank you for using Secret Santa Buddy!";julianimate();}, 2000);
+
+}
+
 
 window.julianneinterval;
 function julianimate(){
@@ -116,6 +124,11 @@ function scaleblocks(){
 			blocks[i].style.height=h+"px";
 		}
 	}
+}
+
+
+function updaterangevalue(){
+	
 }
 
 function santasend(){
@@ -144,6 +157,7 @@ function santasend(){
 	santas.push("emaillist="+emaillist);
 	santas.push('santacount='+j);
 	if(valid){
+		gid("buttonrow").style.display="none";
 		animatesend()
 		//ajxpgn('santaresult', 'services.php?cmd=santasend&'+santas.join('&'), 0, 0, santas.join('&'));
 		var rq=xmlHTTPRequestObject();
@@ -151,10 +165,9 @@ function santasend(){
 				if(rq.readyState == 4){
 					rs=JSON.parse(rq.responseText);
 					if(rs["success"]){
-						gid("buttonrow").style.display="none";
 						setTimeout(animatesuccess, 3000);
 					} else {
-						gid("buttonrow").style.display="block";
+						setTimeout(animatefail, 300);
 					}
 				}
 
