@@ -40,7 +40,7 @@ function santasend(){
 		Happy Holidays!<br><br>
 		<i>This email was sent using the <a href='http://www.ivanzhang.ca/secret-santa-buddy'>Secret Santa Buddy</a> app by <a href='http://www.ivanzhang.ca'>Ivan Zhang</a></i>";
 		$email->addTo($targetobj["email"])
-      ->setFrom("ivanzhangsolutions@gmail.com")
+      ->setFrom("secretsantazhang@gmail.com")
       ->setSubject($subject)
       ->setHtml($body);
 
