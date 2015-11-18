@@ -27,7 +27,7 @@ include 'header.php';
 				</div>
 				<div id="santa-options">
 					<div class="fielddesc">Mininum Amount</div>
-					<div id="price-range" class="inprow">
+					<div id="min-amount-row" class="inprow">
 						$<input type="text" id="minamt" onchange="updaterangevalue" placeholder="0.00" title="Everyone has to spend at least this amount.">
 					</div>
 				</div>

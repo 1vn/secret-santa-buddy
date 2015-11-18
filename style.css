@@ -63,7 +63,7 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
 .inperror{border:3px solid red;}
 .santaoptions{text-align:center;width:100%;height:5px;background:#b0b0b0;transition:height 300ms;overflow:hidden;}
 #minamt{border: 0;width:130px;line-height:30px;font-size:30px;margin:0 auto;}
-#price-range{margin:0 auto;text-align:center;width:150px;font-size:30px;}
+#min-amount-row{margin:0 auto;text-align:center;width:150px;font-size:30px;}
 .fielddesc{text-align:center;}
 
 @media (max-width:1140px){
